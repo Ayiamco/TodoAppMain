@@ -86,8 +86,8 @@ header h1 {
   color: var(--bright-2);
 }
 
-/* todo-items section styles */
-#todo-items {
+/* todo-tasks section styles */
+#todo-tasks {
   background-color: var(--dark-1);
   margin: 2em;
   margin-top: -1em;
@@ -95,8 +95,8 @@ header h1 {
   border-top-left-radius: 7px;
 }
 
-/* item card style section */
-.item {
+/* task card style section */
+.task {
   display: flex;
   justify-content: space-between;
   padding: 0em 1em;
@@ -105,11 +105,12 @@ header h1 {
   border-bottom: 1px solid gray;
   width: 100%;
 }
-.item p {
+.task p {
   margin: 1em 0em;
+  font-size: 1.5em;
 }
 
-.item-desc {
+.task-desc {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -123,8 +124,24 @@ header h1 {
   border: 3px solid var(--bright-2);
   margin-right: 0.5em;
 }
-
-.item i {
+.task svg {
+  display: none;
+}
+.task i {
   color: var(--bright-2);
   font-weight: 1px;
+}
+
+/* completed task styles section */
+.completed-task .task-desc > p {
+  text-decoration-line: line-through;
+  text-decoration-color: var(--bright-1);
+  text-decoration-thickness: 0.2em;
+}
+.completed-task svg {
+  display: block;
+}
+.completed-task .circle {
+  display: flex;
+  align-items: center;
 }
